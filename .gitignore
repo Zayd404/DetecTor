@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local data
+database/*
+!database/.gitkeep
+data/cache/*
+!data/cache/.gitkeep
+
+# Reports and logs
+reports/*
+!reports/.gitkeep
+logs/*
+!logs/.gitkeep
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Local backups
+backup/
+
+# Local configuration
+config/settings.toml
+
+# Temporary source backups
+*.bak
+*.bak[0-9]
