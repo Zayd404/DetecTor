@@ -11,15 +11,15 @@ from ..web_recon.ip_recon import _resolve_domain_raw, _raw_https_get
 PLATFORM_SPECS = {
     "GitHub": ("github.com", "/{u}", "", "github.com", "/{u}", "status"),
     "GitLab": ("gitlab.com", "/api/v4/users", "username={u}", "gitlab.com", "/{u}", "json_nonempty"),
-    "Reddit": ("://reddit.com", "/user/{u}/about.json", "", "://reddit.com", "/user/{u}/", "reddit"),
+    "Reddit": ("reddit.com", "/user/{u}/about.json", "", "reddit.com", "/user/{u}/", "reddit"),
     "Dev.to": ("dev.to", "/api/users/by_username", "url={u}", "dev.to", "/{u}", "json_id"),
     "Medium": ("medium.com", "/@{u}", "", "medium.com", "/@{u}", "status"),
     "Pastebin": ("pastebin.com", "/u/{u}", "", "pastebin.com", "/u/{u}", "status"),
-    "Pinterest": ("://pinterest.com", "/{u}/", "", "://pinterest.com", "/{u}/", "status"),
+    "Pinterest": ("pinterest.com", "/{u}/", "", "pinterest.com", "/{u}/", "status"),
     "Linktree": ("linktr.ee", "/{u}", "", "linktr.ee", "/{u}", "status"),
     "Keybase": ("keybase.io", "/{u}", "", "keybase.io", "/{u}", "status"),
-    "TikTok": ("://tiktok.com", "/@{u}", "", "://tiktok.com", "/@{u}", "link_only"),
-    "Instagram": ("://instagram.com", "/{u}/", "", "://instagram.com", "/{u}/", "link_only"),
+    "TikTok": ("tiktok.com", "/@{u}", "", "tiktok.com", "/@{u}", "link_only"),
+    "Instagram": ("instagram.com", "/{u}/", "", "instagram.com", "/{u}/", "link_only"),
     "X": ("x.com", "/{u}", "", "x.com", "/{u}", "link_only"),
 }
 

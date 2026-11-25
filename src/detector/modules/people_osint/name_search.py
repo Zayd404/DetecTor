@@ -35,12 +35,12 @@ def generate_search_links(query: str) -> dict:
 
     exact = f'"{query}"'
     dork_queries = {
-        "General Web": ("://google.com", "/search", f"q={quote_plus(exact)}"),
-        "LinkedIn Profile": ("://google.com", "/search", f"q={quote_plus(exact + ' site:linkedin.com')}"),
-        "Social Media": ("://google.com", "/search", f"q={quote_plus(exact + ' (site:instagram.com OR site:x.com OR site:tiktok.com OR site:facebook.com)')}"),
-        "Code & Git": ("://google.com", "/search", f"q={quote_plus(exact + ' (site:github.com OR site:gitlab.com)')}"),
-        "Documents (PDF/DOC)": ("://google.com", "/search", f"q={quote_plus(exact + ' (filetype:pdf OR filetype:docx OR filetype:xlsx)')}"),
-        "Paste & Leaks": ("://google.com", "/search", f"q={quote_plus(exact + ' (site:pastebin.com OR site:justpaste.it OR site:ghostbin.com)')}"),
+        "General Web": ("google.com", "/search", f"q={quote_plus(exact)}"),
+        "LinkedIn Profile": ("google.com", "/search", f"q={quote_plus(exact + ' site:linkedin.com')}"),
+        "Social Media": ("google.com", "/search", f"q={quote_plus(exact + ' (site:instagram.com OR site:x.com OR site:tiktok.com OR site:facebook.com)')}"),
+        "Code & Git": ("google.com", "/search", f"q={quote_plus(exact + ' (site:github.com OR site:gitlab.com)')}"),
+        "Documents (PDF/DOC)": ("google.com", "/search", f"q={quote_plus(exact + ' (filetype:pdf OR filetype:docx OR filetype:xlsx)')}"),
+        "Paste & Leaks": ("google.com", "/search", f"q={quote_plus(exact + ' (site:pastebin.com OR site:justpaste.it OR site:ghostbin.com)')}"),
         "DuckDuckGo": ("duckduckgo.com", "/", f"q={quote_plus(exact)}"),
     }
 

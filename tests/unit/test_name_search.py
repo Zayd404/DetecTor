@@ -15,9 +15,18 @@ class TestGenerateSearchLinks(unittest.TestCase):
     def test_search_engines(self):
         result = generate_search_links("DetecTor")
 
-        self.assertIn("Google", result["search_links"])
-        self.assertIn("Bing", result["search_links"])
-        self.assertIn("DuckDuckGo", result["search_links"])
+        expected_categories = (
+            "General Web",
+            "LinkedIn Profile",
+            "Social Media",
+            "Code & Git",
+            "Documents (PDF/DOC)",
+            "Paste & Leaks",
+            "DuckDuckGo",
+        )
+
+        for category in expected_categories:
+            self.assertIn(category, result["search_links"])
 
     def test_empty_query(self):
         result = generate_search_links("")
@@ -34,7 +43,7 @@ class TestGenerateSearchLinks(unittest.TestCase):
 
         self.assertIn(
             "DetecTor+project",
-            result["search_links"]["Google"]
+            result["search_links"]["General Web"]
         )
 
 

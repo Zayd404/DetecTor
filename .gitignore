@@ -10,3 +10,11 @@ logs/*
 *.bak
 *.bak2
 .DS_Store
+
+# Keamanan Tambahan, Data Cache & Database
+.env
+config/settings.toml
+data/*
+!data/.gitkeep
+database/*.db
+database/*.sqlite*

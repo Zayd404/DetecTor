@@ -55,7 +55,9 @@ class TestUIMenus(unittest.TestCase):
         )
 
         self.assertIn("DetecTor", output)
-        self.assertIn("SYSTEM STATUS", output)
+        self.assertIn("FRAMEWORK & MODULES", output)
+        self.assertIn("NETWORK & OPSEC STATUS", output)
+        self.assertIn("DEVICE & STORAGE INFO", output)
         self.assertIn("Android", output)
 
 
