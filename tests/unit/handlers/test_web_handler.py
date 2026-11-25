@@ -42,5 +42,30 @@ class TestWebHandler(unittest.TestCase):
         )
 
 
+
+    @patch("detector.handlers.web_handler.render_web_report")
+    @patch("builtins.input", side_effect=["example.com", "yes"])
+    def test_authorized_recon_renders_report(
+        self, mock_input, mock_report
+    ):
+        engine = MagicMock()
+        results = {
+            "target": "https://example.com",
+            "dns": {
+                "ipv4": ["192.0.2.1"],
+                "ipv6": [],
+            },
+        }
+        engine.web_recon.return_value = results
+
+        handle_web_recon(engine)
+
+        engine.web_recon.assert_called_once_with(
+            "example.com",
+            authorized=True,
+        )
+        mock_report.assert_called_once_with(results)
+
+
 if __name__ == "__main__":
     unittest.main()

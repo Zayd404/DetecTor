@@ -2,6 +2,7 @@ from pathlib import Path
 from datetime import datetime, timezone
 
 from .metadata import generate_metadata
+from .formatter import format_value
 
 
 def save_text_report(
@@ -36,12 +37,7 @@ def save_text_report(
 
     for section, value in data.items():
         lines.append(f"\n[{section.upper()}]")
-
-        if isinstance(value, dict):
-            for key, item in value.items():
-                lines.append(f"  {key}: {item}")
-        else:
-            lines.append(f"  {value}")
+        lines.append(format_value(value, indent=2))
 
     lines.extend([
         "",
